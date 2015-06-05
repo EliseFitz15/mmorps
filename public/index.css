@@ -1,0 +1,10 @@
+.gamezone, h2, h3, p {
+text-align: center;
+}
+
+#button {
+  color: white;
+  background-color: #1ACDA7;
+  border-style: none;
+  padding: 10px 20px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <head>
+    <title>Rock. Paper. Scissors.</title>
+      <link rel="stylesheet" href="/index.css">
+      <link rel="stylesheet" href="/normalize.css">
+      <link rel="stylesheet" href="/foundation.min.css">
+  </head>
+
+  <body>
+    <div class="gamezone">
+    <h2>Rock. Paper. Scissors. </h2>
+    <h3><em>Let's Play! Choose one of the below.</em></h3>
+
+    <% flash.keys.each do |type| %>
+      <div data-alert class="flash <%= type %> alert-box radius">
+        <%= flash[type] %>
+        <a href="#" class="close">&times;</a>
+      </div>
+    <% end %>
+
+        <p>Player: <%= session[:player_score] %></p>
+        <p>Computer: <%= session[:computer_score] %></p>
+
+      <form action="/" method="post">
+
+        <input type="submit" id="button" name="choice" value="Rock">
+        <input type="submit" id="button" name="choice" value="Paper">
+        <input type="submit" id="button" name="choice" value="Scissors">
+
+      </form>
+
+      <img src="http://www.advisoranalyst.com/glablog/wp-content/uploads/2014/05/thumb_6917_rockpaperscissors.jpg">
+
+    </div>
+  </body>
+</html>
